@@ -1,34 +1,14 @@
-
 exports.up = function(knex, Promise) {
-  
+	console.log('create attendingEvents many-to-many table')
+	return knex.schema.createTableIfNotExists('attendingEvents', function(table) {
+		table.increments('id').primary()
+		table.integer('userId').references('id').inTable('users')
+		table.integer('eventId').references('id').inTable('events')
+	})  
 };
 
 exports.down = function(knex, Promise) {
-  
+	return knex.schema.dropTableIfExists('attendingEvents').then(function() {
+		console.log('attendingEvents table was dropped')
+	})  
 };
-
-
-
-app.get('/create/', function(req, res){
-    knex.schema.createTable('drivers', function (table) {
-        table.increments('id').primary();
-        table.string('name');
-        table.dateTime('date');
-        table.timestamps();
-    }).then(function () {
-        return knex.schema.createTable('cars',function(table){           
-            table.increments('id').primary();
-            table.string('car_name');         
-        });
-    }).then(function(){             
-        return knex.schema.createTable('drivers_cars', function(table){
-            table.increments().primary();
-            table.integer('driverId',11).unsigned().references('id').inTable('drivers');
-            table.integer('carId',11).unsigned().references('id').inTable('cars');
-        });
-    }).then(function(){
-        res.send("saved");
-    }).catch(function(err){
-        res.status(500).send(err);
-    });
-});

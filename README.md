@@ -12,7 +12,8 @@ dinner meetup
 - As a user I can leave an event.
 
 ####Stretch
-As a user I can filter events by my area
+- As a user I can filter events by my area
+- As a user(restaurant) I can advertise empty tables.
 
 ##Technologies
 ```

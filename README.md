@@ -20,14 +20,14 @@ dinner meetup
 slush pages-react
 ```
 React
-  react-routes
+  - react-routes
 Redux
-  react-redux
-  redux-thunk
+  - react-redux
+  - redux-thunk
 
 Database
-  SQLite
-  Knex
+  - SQLite
+  - Knex
 
 Style
-  Bootstrap
+  - Bootstrap

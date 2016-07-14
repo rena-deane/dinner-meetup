@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
+import Route from './routes'
 
 class App extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
   render () {
-    return <h1>Welcome to {this.props.name}</h1>
+    return (
+      <div>
+        <h1>Welcome to {this.props.name}</h1>
+        <div id='main'>{ Route } </div>
+      </div>
+    )
   }
-
 }
 
 export default App

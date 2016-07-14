@@ -8,7 +8,8 @@ const INITIAL_STATE = fromJS({
   events:{
     '1':{hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: [], maxAttendes: 50}, //eventid = 1
     '2':{hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: [], maxAttendes: 50} //eventid = 2
-  }
+  },
+  currentUser: 0
 })
 
 export default (state = INITIAL_STATE, action) => {
@@ -18,7 +19,7 @@ export default (state = INITIAL_STATE, action) => {
       return state
 
     default:
-      console.log('type not found')
+      console.log('type not found', action.type)
       return state
   }
 }

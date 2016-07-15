@@ -1,38 +1,44 @@
 import React, { Component } from 'react'
 import EventCard from './containers/EventCardContainer'
 import {Link} from 'react-router'
+import {fromJS, toJS} from 'immutable'
+
 
 class EventList extends Component {
   render () {
 
-    const type = this.params.filter
+    const users = this.props.users.toJS()
+    const type = this.props.params.filter
+    const eventList = users.events
+    var events =[]
 
     if(type === 'all'){
-      const events = this.props.events.map( event => {
-        return <EventCard key={event.get('id')} event={event}/>
+      events = eventList.map( event => {
+        return <EventCard key={event.id} event={event}/>
       })
     }
     else if (type === 'attending'){
-      const attending = this.props.events.filter( event =>{
-        return event.attend = true
+      const attending = eventList.filter( event =>{
+        return event.attend === true
       })
-      const events = attending.map( event => {
-        return <EventCard key={event.get('id')} event={event}/>
+      events = attending.map( event => {
+        return <EventCard key={event.id} event={event}/>
       })
     }
     else if (type === 'hosting'){
-      const attending = this.props.events.filter( event =>{
-        return event.host = true
+      const hosting = eventList.filter( event =>{
+        return event.hosting === true
       })
-      const events = attending.map( event => {
-        return <EventCard key={event.get('id')} event={event}/>
+      events = hosting.map( event => {
+        return <EventCard key={event.id} event={event}/>
       })
     }
+    console.log(events)
 
     return (
       <div>
         <h1>This is EventList Page</h1>
-        <div> { events } </div>
+        <div className="all-cards"> { events } </div>
       </div>
     )
     

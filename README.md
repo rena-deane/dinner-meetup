@@ -64,3 +64,29 @@ Style
 - password
 - hosted_events
 - attending_events
+
+##TODO:
+
+###Containers:
+- Header          | Files Made, Made mapDispatchToProps
+- Footer (Dumb)   | Files Made
+- Login           | Files Made
+- EventList       | Files Made
+- EventCard       | Files Made
+
+###Actions / Reducers
+- Login
+-   Sign in
+-   Sign up
+
+- Event List
+
+- Event Card
+
+- Header
+- Filter by:
+- All         | Setup structure 
+- Attending   | Setup structure 
+- Hosting     | Setup structure 
+- Make new event  | Setup structure   
+

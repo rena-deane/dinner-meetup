@@ -34,10 +34,10 @@ Database
 
 Style
   - Bootstrap
-  - 
+
 ##Store
 - JSON format
-- 
+
 ##Components
 - Header (filter events
 - Footer

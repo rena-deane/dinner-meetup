@@ -28,8 +28,13 @@ export const filterByAll = () => {
   }
 }
 
-export const createNewEvent = () => {
+export const createNewEvent = (name, venue, date, description) => {
   return {
-    type: 'CREATE_NEW_EVENT'
+    type: 'CREATE_NEW_EVENT',
+    name: name,
+    venue: venue,
+    date: date,
+    description: description
   }
 }
+

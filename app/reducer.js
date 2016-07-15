@@ -27,6 +27,8 @@ export default (state = INITIAL_STATE, action) => {
       console.log('Reducer SIGN_UP')
       return state
     case 'FILTER_BY_ATTENDING':
+      const events = state.get('users').get('events')
+      const attending = events.filter()
       console.log('Reducer FILTER_BY_ATTENDING')
       return state
     case 'FILTER_BY_HOSTING':

@@ -6,16 +6,42 @@ import {fromJS, toJS} from 'immutable'
 
 class EventList extends Component {
   render () {
+
     const users = this.props.users.toJS()
-  	const events = users.events.map( event => {
-  		return <EventCard key={event.id} event={event}/>
-  	})
+    const type = this.props.params.filter
+    const eventList = users.events
+    var events =[]
+
+    if(type === 'all'){
+      events = eventList.map( event => {
+        return <EventCard key={event.id} event={event}/>
+      })
+    }
+    else if (type === 'attending'){
+      const attending = eventList.filter( event =>{
+        return event.attend === true
+      })
+      events = attending.map( event => {
+        return <EventCard key={event.id} event={event}/>
+      })
+    }
+    else if (type === 'hosting'){
+      const hosting = eventList.filter( event =>{
+        return event.hosting === true
+      })
+      events = hosting.map( event => {
+        return <EventCard key={event.id} event={event}/>
+      })
+    }
+    console.log(events)
+
     return (
-    	<div>
-    		<h1>This is EventList Page</h1>
-     	 	<div className="all-cards"> { events } </div>
-     	</div>
+      <div>
+        <h1>This is EventList Page</h1>
+        <div className="all-cards"> { events } </div>
+      </div>
     )
+    
   }
 }
 

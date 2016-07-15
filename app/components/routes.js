@@ -6,7 +6,7 @@ import EventList from './containers/EventListContainer'
 
 export default (
   <Router history = { browserHistory }>
-    <Route path="/" component = { EventList } />
-    <Route path="/events" component = { Login } />
+    <Route path="/" component = { Login } />
+    <Route path="/events" component = { EventList } />
   </Router>
 )

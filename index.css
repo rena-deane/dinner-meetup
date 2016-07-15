@@ -46,9 +46,39 @@ li.create-new-link a {
   color: white;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+p#easter-egg {
+  display: none;
+  font-size: 5em;
+}
+
+p#hover {
+  padding-bottom: 2em
+}
+
+.event-card {
+    border: 3px solid #84467e ;
+    width: 30%;
+    margin: 3% auto;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #a6a6a6 ;
+    background-color: #84467e ;
+    color: #ffffff;
+}
+
 .nav {
     padding-left: 0;
     list-style: none;
+}
+
+.event-card div {
+  line-height: 40px;
 }
 
 .navbar {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import EventCard from './containers/EventCardContainer'
 import {Link} from 'react-router'
 import {fromJS, toJS} from 'immutable'
-
+import Header from './containers/HeaderContainer'
 
 class EventList extends Component {
   render () {
@@ -37,11 +37,12 @@ class EventList extends Component {
 
     return (
       <div>
+        <Header />
         <h1>This is EventList Page</h1>
         <div className="all-cards"> { events } </div>
       </div>
     )
-    
+
   }
 }
 

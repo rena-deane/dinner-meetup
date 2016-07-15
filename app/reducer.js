@@ -15,9 +15,25 @@ const INITIAL_STATE = fromJS({
 export default (state = INITIAL_STATE, action) => {
 
   switch (action.type) {
-    case 'TEST_TYPE':
+    case 'LOGIN':
+      console.log('Reducer LOGIN')
       return state
-
+    case 'SIGN_UP':
+      console.log('Reducer SIGN_UP')
+      return state
+    case 'FILTER_BY_ATTENDING':
+      console.log('Reducer FILTER_BY_ATTENDING')
+      return state
+    case 'FILTER_BY_HOSTING':
+      console.log('Reducer FILTER_BY_HOSTING')
+      return state
+    case 'FILTER_BY_ALL':
+      console.log('Reducer FILTER_BY_ALL')
+      return state
+    case 'CREATE_NEW_EVENT':
+      console.log('Reducer CREATE_NEW_EVENT')
+      return state
+    
     default:
       console.log('type not found', action.type)
       return state

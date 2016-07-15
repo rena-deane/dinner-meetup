@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 
 class EventCard extends Component {
   render () {
+  	const id = this.props.event.get('eventId')
+  	const eventName = this.props.event.get('eventName')
+  	const venue = this.props.event.get('venue')
     return (
-      <div>
-        <h1>This is EventCard Page</h1>
+      <div className = "eventCard">
+        <h1>Event: {id}</h1>
+        <div>{eventName}</div>
+        <div>venue: {venue} </div>
       </div>
     )
   }

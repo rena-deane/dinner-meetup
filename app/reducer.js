@@ -5,10 +5,10 @@ const INITIAL_STATE = fromJS({
     '1':{userName:'abcd', password:'password', hostedEvents: [], attendingEvents: []}, //userid = 1
     '2':{userName:'pqrs', password:'password', hostedEvents: [], attendingEvents: []} //userid = 2
   },
-  events:{
-    '1':{hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: [], maxAttendes: 50}, //eventid = 1
-    '2':{hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: [], maxAttendes: 50} //eventid = 2
-  },
+  events:[
+    {id: 1, hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: []}, //eventid = 1
+    {id: 2, hostID:1, eventName: 'Party', description: 'End of phase party', venue: 'EDA', eventDataTime:'?', attendes: []} //eventid = 2
+  ],
   currentUser: 0
 })
 

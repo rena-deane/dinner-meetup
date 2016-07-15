@@ -5,7 +5,7 @@ import EventList from '../EventList'
 
 const mapStateToProps = (state) =>{
   return{
-    
+  	events: state.get('events')
   }
 }
 

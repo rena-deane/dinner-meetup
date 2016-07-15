@@ -17,7 +17,7 @@ class Login extends Component {
         <h1>Login</h1>
         	<input id="loginTextBox" type="text" /><button onClick={() => {this.handleClick()}}>Ok</button>
         <br /><br /><br />
-        <Link to={'/events'}>Link to Events</Link>
+        <Link to={'/events/all'}>Link to Events</Link>
       </div>
     )
   }

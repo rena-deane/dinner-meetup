@@ -28,7 +28,7 @@ export default (props) => {
         <li><Link to="/events/all">All</Link></li>
         <li><Link to="/events/attending">Attending</Link></li>
         <li><Link to="/events/hosting">Hosting</Link></li>
-        <li><Link to="/new">Create new</Link></li>
+        <li className='create-new-link'><Link to="/new" className='link'> + Create Event</Link></li>
       </ul>
     </div>
   )

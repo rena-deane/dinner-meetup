@@ -4,7 +4,9 @@ class Footer extends Component {
   render () {
     return (
       <div>
-        <h1>This is Footer Page</h1>
+        <hr />
+        <p id='hover'>Copyright 2016</p>
+        <p id='easter-egg'>DO NOT STEAL OUR SHIT WEBSITE</p>
       </div>
     )
   }

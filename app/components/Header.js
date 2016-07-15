@@ -23,15 +23,13 @@ export default (props) => {
 	}
 
   return (
-    <div id="main-nav">
-      <h1>This is Header Page</h1>
-      <ul>
-      <li><Link to="/events/all">All</Link></li>
-      <li><Link to="/events/attending">Attending</Link></li>
-      <li><Link to="/events/hosting">Hosting</Link></li>
-      <li><Link to="/new">Create new</Link></li>
+    <div className='navbar navbar-default'>
+      <ul className='nav navbar-nav'>
+        <li><Link to="/events/all">All</Link></li>
+        <li><Link to="/events/attending">Attending</Link></li>
+        <li><Link to="/events/hosting">Hosting</Link></li>
+        <li><Link to="/new">Create new</Link></li>
       </ul>
     </div>
   )
 }
-

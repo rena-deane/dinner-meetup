@@ -6,7 +6,7 @@ import Footer from './Footer'
 class App extends Component {
   render () {
     return (
-      <div>
+      <div id='app-wrapper'>
         <div id='main'>{ Route } </div>
         <Footer />
       </div>

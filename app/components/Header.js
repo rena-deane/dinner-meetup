@@ -23,15 +23,14 @@ export default (props) => {
 	}
 
   return (
-    <div>
-      <h1>This is Header Page</h1>
-      <ul>
-      <li><button onClick={filterByAll}>All</button></li>
-      <li><button onClick={filterByAttending}>Attending</button></li>
-      <li><button onClick={filterByHosting}>Hosting</button></li>
-      <li><button onClick={createNewEvent}>Create new</button></li>
+    <div className='navbar navbar-default'>
+      <ul className='nav navbar-nav'>
+          <li><button onClick={filterByAll}>All</button></li>
+          <li><button onClick={filterByAttending}>Attending</button></li>
+          <li><button onClick={filterByHosting}>Hosting</button></li>
+          <li><button onClick={createNewEvent} className='create-event'>+ create new</button></li>
       </ul>
     </div>
+
   )
 }
-

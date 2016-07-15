@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 
+
 class EventCard extends Component {
   render () {
-  	const id = this.props.event.get('eventId')
-  	const eventName = this.props.event.get('eventName')
-  	const venue = this.props.event.get('venue')
+    console.log(this.props)
+  	const id = this.props.event.id
+  	const eventName = this.props.event.eventName
+    const venue = this.props.event.venue
+    const description = this.props.event.description
+  	const eventDate = this.props.event.eventDate
+
+    // {id, eventName, venue, description, eventDate} = this.props.event
+    console.log(id, eventName, venue, description, eventDate)
     return (
-      <div className = "eventCard">
+      <div className = "event-card">
         <h1>Event: {id}</h1>
-        <div>{eventName}</div>
-        <div>venue: {venue} </div>
+        <div>Why: {eventName}</div>
+        <div>Where: {venue} </div>
+        <div>When: {eventDate} </div>
+        <div>How: {description} </div>
       </div>
     )
   }

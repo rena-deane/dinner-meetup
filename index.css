@@ -22,10 +22,16 @@ ul {
     -webkit-padding-start: 40px;
 }
 
+/*button {
+  font-size: 1.15em;
+  border-radius: 5px;
+  border:
+}
+
 button.create-event {
   font-size: 1.15em;
   border-radius: 5px;
-}
+}*/
 
 .nav {
     padding-left: 0;

@@ -25,12 +25,11 @@ export default (props) => {
   return (
     <div className='navbar navbar-default'>
       <ul className='nav navbar-nav'>
-          <li><button onClick={filterByAll}>All</button></li>
-          <li><button onClick={filterByAttending}>Attending</button></li>
-          <li><button onClick={filterByHosting}>Hosting</button></li>
-          <li><button onClick={createNewEvent} className='create-event'>+ create new</button></li>
+        <li><Link to="/events/all">All</Link></li>
+        <li><Link to="/events/attending">Attending</Link></li>
+        <li><Link to="/events/hosting">Hosting</Link></li>
+        <li><Link to="/new">Create new</Link></li>
       </ul>
     </div>
-
   )
 }
